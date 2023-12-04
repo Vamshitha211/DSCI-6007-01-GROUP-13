@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Analysis Results</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+        h1, h2 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+            text-shadow: 1px 1px #ccc;
+        }
+        img {
+            display: block;
+            margin: auto;
+            box-shadow: 0px 0px 5px grey;
+        }
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stock Analysis Results</h1>
+    <h2>Daily Return of {{ request.form['company_name'] }} Stock on Average</h2>
+    <img src="{{ plot_url1 }}" alt="Daily Return">
+    <br><br>
+    <h2>Closing Price of {{ request.form['company_name'] }} from {{ request.form['start_date'] }} to {{ request.form['end_date'] }}</h2>
+    <img src="{{ plot_url2 }}" alt="Closing Price">
+    <br><br>
+    <form action="{{ url_for('home') }}">
+        <input type="submit" value="Back">
+    </form>
+    <p>{{predictions}}</p>
+</body>
+</html>
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Analysis</title>
+    <style>
+        body {
+            background-image: url("https://www.forbes.com/advisor/wp-content/uploads/2022/08/bull_bear_getty.jpeg.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: black;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0px 0px 5px grey;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stock Analysis</h1>
+    <form action="{{ url_for('home') }}" method="post">
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required>
+        <br><br>
+        <label for="end_date">End Date:</label>
+        <input type="date" id="end_date" name="end_date" required>
+        <br><br>
+        <label for="company_name">Company Name:</label>
+        <select id="company_name" name="company_name" required>
+            <option value="APPLE">APPLE</option>
+            <option value="GOOGLE">GOOGLE</option>
+            <option value="MICROSOFT">MICROSOFT</option>
+            <option value="AMAZON">AMAZON</option>
+            <option value="NVIDIA">NVIDIA</option>
+            <option value="ADOBE">ADOBE</option>
+            <option value="SALESFORCE">SALESFORCE</option>
+            <option value="ACCENTURE">ACCENTURE</option>
+            <option value="CISCO">CISCO</option>
+            <option value="MASTERCARD">MASTERCARD</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
