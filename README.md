@@ -1,4 +1,4 @@
-![image](https://github.com/Vamshitha211/Predicting-Stock-Market/assets/79069337/ae15d911-0ff2-49f9-82d7-82df4d2d309f)# Predicting Future Stock Prices with LSTM Model
+# Predicting Future Stock Prices with LSTM Model
 
 This presentation aims to explore the use of LSTM models in predicting future stock prices to aid investors and traders in making better-informed investment decisions.
 
